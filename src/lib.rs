@@ -14,12 +14,12 @@
 //!
 #[cfg(all(target_arch = "wasm32", feature = "console-debug"))]
 pub use web_sys::console::debug_1 as log;
-#[cfg(all(target_arch = "wasm32", feature = "console-log"))]
-pub use web_sys::console::log_1 as log;
 #[cfg(all(target_arch = "wasm32", feature = "console-error"))]
 pub use web_sys::console::error_1 as log;
 #[cfg(all(target_arch = "wasm32", feature = "console-info"))]
 pub use web_sys::console::info_1 as log;
+#[cfg(all(target_arch = "wasm32", feature = "console-log"))]
+pub use web_sys::console::log_1 as log;
 #[cfg(all(target_arch = "wasm32", feature = "console-trace"))]
 pub use web_sys::console::trace_1 as log;
 #[cfg(all(target_arch = "wasm32", feature = "console-warn"))]
