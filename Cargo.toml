@@ -1,0 +1,26 @@
+[package]
+name = "wasm-rs-dbg"
+version = "0.1.0-dev"
+authors = ["Yurii Rashkovskii <yrashk@gmail.com>"]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+description = "dbg! macro for WebAssembly environment"
+repository = "https://github.com/wasm-rs/dbg"
+documentation = "https://docs.rs/wasm-rs-dbg"
+readme = "README.md"
+keywords = ["wasm", "dbg", "debug"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+web-sys = { version = "0.3.47", features = ["console"] }
+
+[features]
+default = ["console-debug"]
+console-debug = []
+console-log = []
+console-error = []
+console-info = []
+console-trace = []
+console-warn = []
