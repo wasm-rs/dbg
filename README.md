@@ -11,7 +11,7 @@ Include this dependency in your `Cargo.toml`:
 
 ```toml
 [dependencies]
-wasm-rs-dbg = "0.1.0-dev"
+wasm-rs-dbg = "0.1.0"
 ```
 
 Then, in files where you want to use WebAssembly-enabled logging to `console`, use this import:
