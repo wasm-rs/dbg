@@ -24,3 +24,6 @@ console-error = []
 console-info = []
 console-trace = []
 console-warn = []
+
+[dev-dependencies]
+wasm-bindgen-test = "0.2"
