@@ -1,6 +1,7 @@
 ## dbg! for wasm32
 [![Crate](https://img.shields.io/crates/v/wasm-rs-dbg.svg)](https://crates.io/crates/wasm-rs-dbg)
 [![API](https://docs.rs/wasm-rs-dbg/badge.svg)](https://docs.rs/wasm-rs-dbg)
+[![Chat](https://img.shields.io/discord/807386653852565545.svg?logo=discord)](https://discord.gg/qbcbjHWjaD)
 
 This micro-crate provides a drop-in replacement for [`std::dbg`](https://doc.rust-lang.org/std/macro.dbg.html) macro
 that logs to `console` when compiled for `wasm32` and falls back to `std::dbg` on all other platforms.
