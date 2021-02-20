@@ -2,6 +2,10 @@
 
 ## [Unreleased] - ReleaseDate
 
+### Changed
+
+- Not pulling dependencies that are not required for a given target anymore
+
 ## [0.1.1] - 2021-02-20
 
 ### Added
