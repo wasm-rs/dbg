@@ -13,7 +13,7 @@ keywords = ["wasm", "dbg", "debug"]
 [lib]
 crate-type = ["cdylib", "rlib"]
 
-[dependencies]
+[target.wasm32-unknown-unknown.dependencies]
 web-sys = { version = "0.3.47", features = ["console"] }
 
 [features]
@@ -25,7 +25,7 @@ console-info = []
 console-trace = []
 console-warn = []
 
-[dev-dependencies]
+[target.wasm32-unknown-unknown.dev-dependencies]
 wasm-bindgen-test = "0.2"
 
 [package.metadata.wasm.rs]
