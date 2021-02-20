@@ -27,3 +27,7 @@ console-warn = []
 
 [dev-dependencies]
 wasm-bindgen-test = "0.2"
+
+[package.metadata.wasm.rs]
+targets = ["wasm32-unknown-unknown", "wasm32-wasi"]
+wasm-readme = "README.md"
