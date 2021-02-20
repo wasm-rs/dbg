@@ -4,7 +4,7 @@
 [![Chat](https://img.shields.io/discord/807386653852565545.svg?logo=discord)](https://discord.gg/qbcbjHWjaD)
 
 This micro-crate provides a drop-in replacement for [`std::dbg`](https://doc.rust-lang.org/std/macro.dbg.html) macro
-that logs to `console` when compiled for `wasm32` and falls back to `std::dbg` on all other platforms.
+that logs to `console` when compiled for `wasm32-unknown-unknown` and falls back to `std::dbg` on all other platforms.
 
 ## Usage
 

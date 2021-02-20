@@ -70,9 +70,29 @@ jobs:
         with:
           version: 'latest'
 
-      - name: Check if it builds
+
+      - name: Use wasmtime 0.23.0
+        uses: mwilliamson/setup-wasmtime-action@v1
+        with:
+          wasmtime-version: "0.23.0"
+
+      - name: Install wasmer
+        run: |-
+          curl https://get.wasmer.io -sSfL | sh
+
+      - name: Check if it builds and runs in Chrome
         run: |-
           wasm-pack test --chrome --headless
+
+      - name: Check if it builds and runs under wasmtime
+        run: |-
+          cargo test --target wasm32-wasi
+
+      - name: Check if it builds and runs under wasmer
+        run: |-
+          source ~/.wasmer/wasmer.sh
+          cp .cargo/config.wasmer.toml .cargo/config.toml
+          cargo test --target wasm32-wasi 
 
   lints:
     name: Lints
